@@ -1,5 +1,11 @@
 # LeetCode-Solutions
 
+Welcome to this Repository
+
+# Introduction
+
+In this Repository, I will be adding solutions of problems from Leetcode.
+
 Note1:In each .java file there is question which is elaborated by giving an example and showing output.
 
 Note2:Problem statement and example for each question is taken from LeetCode itself.Solutions are mine. 
