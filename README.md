@@ -6,6 +6,10 @@ Note2:Problem statement and example for each question is taken from LeetCode its
 
 # Want to contribute?
 
+If you'd like to contribute to this repository, I welcome your contributions. Feel free to open new issues. You can contribute by adding new programs, improving existing code, fixing bugs, or adding documentation.
+
+Here's how to contribute:
+
 1. Fork this repository.
 
 2. Clone it in your system.
