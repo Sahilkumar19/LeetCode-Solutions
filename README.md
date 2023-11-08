@@ -20,11 +20,11 @@ Here's how to contribute:
 
 1. Fork this repository.
 
-2. Clone it in your system.
+2. Clone it in your local system.
 
 3. Go through the solutions, I have provided and if you find any bug or any type of issue first raise that issue.
 
-4. I will see your issue, then I will assign you to work on that issue(if you want).
+4. I will see your issue, then I will assign you to work on that issue(if you want) or you can work without i assign you.
 
 3. Try to resolve the issue in your local system.
 
