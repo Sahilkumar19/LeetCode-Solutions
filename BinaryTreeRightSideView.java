@@ -31,22 +31,21 @@ public class BinaryTreeRightSideView {
             return result;
         }
         Queue<TreeNode> queue=new LinkedList<>();
-        queue.offer(root);
-        result.add(root.data);
         while (!queue.isEmpty()){
             int levelsize= queue.size();
-            List<Integer> mr=result;
-            int n;
             for (int i = 0; i < levelsize; i++) {
                 TreeNode currentnode=queue.poll();
-                if (currentnode.right!=null){
+                if (i==levelsize-1){
+                    result.add(currentnode.data);
+                }
+                if(currentnode.left!=null){
+                    queue.offer(currentnode.left);
+                }
+                if(currentnode.right!=null){
                     queue.offer(currentnode.right);
-                    n=currentnode.right.data;
-                    result.add(currentnode.right.data);
                 }
 
             }
-//            result.add(n);
         }
         return result;
     }
