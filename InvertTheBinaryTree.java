@@ -24,35 +24,46 @@ public class InvertTheBinaryTree {
         System.out.println(ans);
     }
     public static List<Integer> invertTree(TreeNode root) {
-        List<Integer> result=new ArrayList<>();
-        if (root==null){
-            return result;
+        // List<Integer> result=new ArrayList<>();
+        // if (root==null){
+        //     return result;
+        // }
+        // Queue<TreeNode> queue=new LinkedList<>();
+        // queue.offer(root);
+        // result.add(root.data);
+        // while (!queue.isEmpty()){
+        //     int levesize= queue.size();
+        //     for (int i = 0; i < levesize; i++) {
+        //         TreeNode currentnode=queue.poll();
+        //         if (currentnode.right!=null){
+        //             queue.offer(currentnode.right);
+        //             result.add(currentnode.right.data);
+        //         }
+        //         if (currentnode.left!=null){
+        //             queue.offer(currentnode.left);
+        //             result.add(currentnode.left.data);
+        //         }
+        //     }
+        // }
+        // return result;
+        if(root==null){
+            return null;
         }
-        Queue<TreeNode> queue=new LinkedList<>();
-        queue.offer(root);
-        result.add(root.data);
-        while (!queue.isEmpty()){
-            int levesize= queue.size();
-            for (int i = 0; i < levesize; i++) {
-                TreeNode currentnode=queue.poll();
-                if (currentnode.right!=null){
-                    queue.offer(currentnode.right);
-                    result.add(currentnode.right.data);
-                }
-                if (currentnode.left!=null){
-                    queue.offer(currentnode.left);
-                    result.add(currentnode.left.data);
-                }
-            }
-        }
-        return result;
+        TreeNode temp=root.left;
+        root.left=root.right;
+        root.right=temp;
+
+        invertTree(root.left);
+        invertTree(root.right);
+
+        return root;
     }
 }
 class TreeNode{
     int data;
     TreeNode left,right;
     public TreeNode(int key){
-        key=data;
+        this.data=key;
         left=right=null;
     }
 }
