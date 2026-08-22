@@ -20,6 +20,15 @@ public class NumbersComplement {
             bitCount++;
             temp >>= 1; // Right shift to remove the least significant bit
         }
+        // above we are just counting the number of bit in the binary representation of the num nothing else. so we can build a bitmask
+        // of same length having all bit equal to 1. we can replace the same logic with the below code snippet.you can easily get it if you know
+        // how right shift works. 
+
+
+        // while(temp>0){
+        //     bitcount++
+        //     temp=temp/2
+        // }
 
         // Create a bitmask with all bits set to 1 up to the significant bits of the original number
         int bitmask = (1 << bitCount) - 1;
