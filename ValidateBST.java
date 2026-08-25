@@ -38,7 +38,7 @@ public class ValidateBST {
             return false;
         }
         boolean leftTree=helper(root.left,low,root.data);
-        boolean rightTree=helper(root.right,high, root.data);
+        boolean rightTree=helper(root.right,root.data, high);
         return leftTree&&rightTree;
     }
 
